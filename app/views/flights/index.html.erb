@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<form  name="search" action="index" method="get">
+
+<h1> Search for your flight:</h1>
+<p> Departing Airport:</p>
+<p>  <select name="DepartureAirport">
+    <%= @airports.each do |airport| %>
+      <option value="<%= airport.id %>"><%= airport.code %></option>
+    <% end %>
+  </select></p>
+  <p> Arrival Airport:</p>
+<p>  <select name="ArrivalAirport">
+    <%= @airports.each do |airport| %>
+      <option value="<%= airport.id %>"><%= airport.code %></option>
+    <% end %>
+  </select></p>
+  <p> Number Of Passengers:</p>
+  <p>
+    <select name="NumberOfPassengers">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    </select>
+  </p>
+  <p> Date:</p>
+  <p> 
+    
+  <input type="date"  name="Date"
+      
+       min="2022-11-4"  max="2022-12-31">
+   
+   </p>
+   <input type="submit" name="Search" value="Search" />
+</form>
+
+
+
+
+  
+  
+  
+  
+  
+  

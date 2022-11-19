@@ -1,0 +1,15 @@
+<h1>New Flight</h1>
+
+<%= form_for @flights do |f| %>
+
+<p> Departing Airport:</p>
+ <%= f.select(:DepartureAirport, @airport_options) %>
+  <p> Arrival Airport:</p>
+ <%= f.select(:ArrivalAirport, @airport_options) %>
+  <p> Number Of Passengers:</p>
+   <%= f.select :NumberOfPassengers, options_for_select(1..4) %>
+  <p> Date:</p>
+   <%= f.date_field :Date, class: 'form-control' %>
+   
+   <%= f.submit %>
+<% end %>
